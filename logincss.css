@@ -1,0 +1,92 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #6c5ce7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container for Login Box */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Login Box */
+.login-box {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Title */
+.login-box h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.5);
+    outline: none;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #6c5ce7;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+    background: #74b9ff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(116, 185, 255, 0.4);
+}
+
+.login-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

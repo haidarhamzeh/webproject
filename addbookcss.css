@@ -1,0 +1,220 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e8e8e8);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #6c5ce7;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffdd59;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Book Collection Section */
+.book-collection {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.book-collection h2 {
+    font-size: 1.8rem;
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.book-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+}
+
+.book-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.book-card h3 {
+    font-size: 1.2rem;
+    color: #6c5ce7;
+    margin-bottom: 0.5rem;
+}
+
+.book-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Add Book Form Section */
+form-section {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+form h2 {
+    font-size: 1.8rem;
+    color: #6c5ce7;
+    margin-bottom: 1rem;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.5);
+}
+
+form button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #4834d4;
+}
+
+/* Footer */
+footer {
+    background: #6c5ce7;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-grid {
+        grid-template-columns: repeat(1, 1fr); /* Single column on very small screens */
+    }
+}
