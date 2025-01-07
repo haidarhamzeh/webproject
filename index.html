@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+    <h1>Do you want to login as User or Admin?</h1>
+
+    <div class="container">
+        <!-- Admin Section -->
+        <div class="card" onclick="window.location.href='login.php'">
+            <img src="img/admin1.png" alt="Admin">
+            <div class="label">Admin</div>
+        </div>
+
+        <!-- User Section -->
+        <div class="card" onclick="window.location.href='register.php'">
+            <img src="img/user1.jpeg" alt="User">
+            <div class="label">User</div>
+        </div>
+    </div>
+
+</body>
+</html>

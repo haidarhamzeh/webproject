@@ -9,8 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Books</title>
     <link rel="stylesheet" href="managebookcss.css">
+  
 </head>
 <body>
+
+
+
 
   
     <header>
@@ -18,8 +22,9 @@
             <div class="logo">📚 Book Tracker</div>
             <ul class="nav-links">
                 <li><a href="main.php" class="nav-link">Home</a></li>
-                <li><a href="addbook.php" class="nav-link">Add Book</a></li>
-                <li><a href="managebooks.php" class="nav-link">Manage Books</a></li>
+                <li><a href="books.html" class="nav-link">Books</a></li>
+               
+                <li><a href="loginuser.php" class="nav-link">Log Out</a></li>
             </ul>
         </nav>
         
@@ -30,6 +35,7 @@
     <h1>Manage Books</h1>
         <section>
             <h2>Books List</h2>
+            <h3>please press on your book title to check your informations</h3>
             
     
 <table>
@@ -58,7 +64,8 @@ $result=mysqli_query($con,$sql);
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>
            
-            <td>" . $row['db_title'] . "</td>
+            <td><a href=bookdetails.php?ID=".$row['id'].">" . $row['db_title'] . "</a></td>
+          
             
             <td>" . $row['db_author'] . "</td>
             <td><img src='img/edit.jpg' width=35px</td>
@@ -77,6 +84,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 </table>
+<h2>please press on your book title to check your informations</h2>
     </main>
     <footer>
         <p>&copy; 2024 Book Tracker</p>

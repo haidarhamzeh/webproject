@@ -16,11 +16,17 @@
             <div class="logo">📚 Book Tracker</div>
             <ul class="nav-links">
                 <li><a href="main.php" class="nav-link">Home</a></li>
-                <li><a href="addbook.php" class="nav-link">Add Book</a></li>
-                <li><a href="managebooks.php" class="nav-link">Manage Books</a></li>
+                <li><a href="books.html" class="nav-link">Books</a></li>
+
+                <li><a href="loginuser.php" class="nav-link">Log Out</a></li>
+                
             </ul>
         </nav>
+
+    
     </header>
+   
+</div>
 
     <main>
         <section class="welcome-section">
@@ -85,9 +91,26 @@
                     <h3>Brave New World</h3>
                     <p>Author: Aldous Huxley</p>
                 </div>
-            </div>
         </section>
-    
+        <div class="book-grid">
+        <?php
+    include 'inc/connection.php';
+$sql="SELECT * FROM addbook";
+
+$result=mysqli_query($con,$sql);
+
+while ($row = mysqli_fetch_assoc($result)) {
+        echo '<div class="book-card">';
+        echo '<img src="' . $row['db_image'] . '" alt="Book Cover">';
+
+        echo '<h3> title: '.$row['db_title']. '</h3>';
+        echo '<p>Author: ' . $row['db_author'] . '</p>';
+        echo '</div>';
+    }
+    ?>
+</div>
+  
+
 <section>
             <h2>Add Your Book</h2>
             <form action="addbook_action.php"  method="post">
@@ -98,6 +121,26 @@
                 
 
                 author: <input type=text  name="txtauthor" >
+                <div class="form-group">
+  <label for="bookType">Type:</label>
+  <select name="txttype">
+  <?php 
+include "inc/connection.php";
+
+ $sql="SELECT * FROM booktype";
+
+$result=mysqli_query($con,$sql);
+
+while ($row = mysqli_fetch_assoc($result)){
+
+    
+   
+    echo"<option>".$row['type_name']."</option>";
+} 
+?>
+  </select>
+</div>
+                phoneNumber: <input type="int" name="txtphone" >
                 <button type="submit" class="button add">Add Book</button>
             </form>
         </section>
